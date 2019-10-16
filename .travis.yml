@@ -4,7 +4,7 @@ go:
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_9d9133a8b71b_key -iv $encrypted_9d9133a8b71b_iv
-  -in key.json.enc -out creds/key.json -d
+  -in key.json.enc -out key.json -d
 
 script: go test -v ./...
 
