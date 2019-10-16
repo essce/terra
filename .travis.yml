@@ -10,7 +10,7 @@ script: go test -v ./...
 
 deploy:
   provider: gae
-  keyfile: "./creds/key.json"
+  keyfile: "./key.json"
   project: stanproj1
   version: 1.0.0
 
