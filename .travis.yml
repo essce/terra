@@ -1,6 +1,16 @@
 language: go
-
 go:
 - 1.12
 
+before_install:
+- openssl aes-256-cbc -K $encrypted_9d9133a8b71b_key -iv $encrypted_9d9133a8b71b_iv
+  -in key.json.enc -out creds/key.json -d
+
 script: go test -v ./...
+
+deploy:
+  provider: gae
+  keyfile: "./creds/key.json"
+  project: stanproj1
+  version: 1.0.0
+
