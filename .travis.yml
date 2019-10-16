@@ -12,5 +12,5 @@ deploy:
   provider: gae
   keyfile: "./key.json"
   project: stanproj1
-  version: 1.0.0
+  version: v0-0-1
 
